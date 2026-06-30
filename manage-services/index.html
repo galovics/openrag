@@ -11,7 +11,7 @@
 <script>!function(){function e(){if(void 0!==window.truste&&window.truste.cma){var e=window.truste.cma.callApi("getConsent",window.location.href)||{},n=1===e[2],t=1===e[3];gtag("consent","update",{ad_storage:n?"granted":"denied",ad_user_data:n?"granted":"denied",ad_personalization:n?"granted":"denied",analytics_storage:t?"granted":"denied"})}}window.addEventListener&&(window.addEventListener("cm_data_subject_consent_changed",e),window.addEventListener("cm_consent_preferences_set",e)),"complete"===document.readyState?e():window.addEventListener("load",e)}()</script>
 <script>window._ibmAnalytics={settings:{name:"DataStax",tealiumProfileName:"ibm-subsidiary"},trustarc:{privacyPolicyLink:"https://ibm.com/privacy"}},window.digitalData={page:{pageInfo:{ibm:{siteId:"IBM_DataStax"}},category:{primaryCategory:"PC230"}}}</script>
 <script src="//1.www.s81c.com/common/stats/ibm-common.js" async="true"></script><link rel="stylesheet" href="/assets/css/styles.4eb4a30d.css">
-<script src="/assets/js/runtime~main.4ee8ef6d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0405fb97.js" defer="defer"></script>
 <script src="/assets/js/main.358b0953.js" defer="defer"></script>
 </head>
 <body>
@@ -82,6 +82,7 @@ To view streaming logs, click the name of a service, and then press <kbd>l</kbd>
 <li class="">Destroys all OpenRAG containers, volumes, and local images.</li>
 <li class="">Prunes any additional container objects.</li>
 <li class="">Deletes the contents of the <code>~/.openrag</code> directory <em>except</em> for OpenRAG&#x27;s <code>.env</code> file and the <code>/documents</code> subdirectory.</li>
+<li class="">Removes any legacy <code>opensearch-data</code> directory so old index data does not survive a reset.</li>
 </ul><p></p><p></p>Destroyed containers and deleted data are lost and cannot be recovered after running this operation.<p></p></div></div>
 <p>Use these steps to reset your OpenRAG deployment by recreating the containers and deleting all data in the <code>~/.openrag</code> directory <em>except</em> for the <code>.env</code> file and the <code>/documents</code> subdirectory.</p>
 <p>This restores your OpenRAG deployment to a near-initial state while preserving your configuration (in <code>.env</code>) and uploaded documents (in <code>/documents</code>).
